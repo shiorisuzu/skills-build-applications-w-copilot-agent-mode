@@ -10,7 +10,6 @@ class User(models.Model):
 
 class Team(models.Model):
     name = models.CharField(max_length=50, unique=True)
-    members = models.ArrayField(model_container=User)
     def __str__(self):
         return self.name
 
